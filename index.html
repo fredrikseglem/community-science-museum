@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Community Science Museum! Explore the wonders of science with interactive exhibits for all ages. Join us for a day of fun, discovery, and learning.">
+    <meta name="keywords" content="science museum, community museum, kids activities, family fun, science exhibits, Stavanger">
+    <title>Community Science Museum | Explore Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Simple transition for page content */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        /* Custom hero background */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509410752833-b6b8f3a9e3a3?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="nav-link text-2xl font-bold text-indigo-600">
+                <span class="mr-2" role="img" aria-label="atom emoji">⚛️</span> Community Science Museum
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="#exhibitions" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300">Exhibitions</a>
+                <a href="#visit" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300">Visit</a>
+                <a href="#involved" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300">Get Involved</a>
+                <a href="#events" class="nav-link text-gray-600 hover:text-indigo-600 transition duration-300">Special Events</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#home" class="nav-link-mobile block py-2 text-gray-600 hover:bg-indigo-50 rounded-lg">Home</a>
+            <a href="#exhibitions" class="nav-link-mobile block py-2 text-gray-600 hover:bg-indigo-50 rounded-lg">Exhibitions</a>
+            <a href="#visit" class="nav-link-mobile block py-2 text-gray-600 hover:bg-indigo-50 rounded-lg">Visit</a>
+            <a href="#involved" class="nav-link-mobile block py-2 text-gray-600 hover:bg-indigo-50 rounded-lg">Get Involved</a>
+            <a href="#events" class="nav-link-mobile block py-2 text-gray-600 hover:bg-indigo-50 rounded-lg">Special Events</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <div class="hero-bg text-white">
+                <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore. Discover. Learn.</h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">"Explore together" - Join us at the Community Science Museum, where we're committed to making science accessible and fun for everyone!</p>
+                    <a href="#exhibitions" class="nav-link bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">See Our Exhibits</a>
+                </div>
+            </div>
+
+            <!-- Introduction Section -->
+            <div class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                     <h2 class="text-3xl font-bold text-gray-800">Welcome to a World of Wonder</h2>
+                     <p class="text-gray-600 mt-2">From the stars above to the world under a microscope, science is a grand adventure.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-gray-700 mb-4">Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.</p>
+                        <p class="text-gray-700 mb-4">The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.</p>
+                        <p class="text-gray-700">We believe science should not be confined to the textbook, but brought to life through over 1000 interactive exhibits. Come play, interact, and see science in action (but watch out for the dinosaurs at night!).</p>
+                    </div>
+                    <div>
+                        <img src="https://images.pexels.com/photos/1863344/pexels-photo-1863344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A bright, modern museum interior with a rocket and other exhibits" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- For Kids & Teachers Section -->
+            <div class="bg-indigo-50">
+                <div class="container mx-auto px-6 py-16">
+                    <div class="text-center mb-12">
+                         <h2 class="text-3xl font-bold text-gray-800">Science for Everyone</h2>
+                         <p class="text-gray-600 mt-2">Special programs for young explorers and educators.</p>
+                    </div>
+                     <div class="grid md:grid-cols-2 gap-8">
+                        <!-- For Kids -->
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">For Kids</h3>
+                            <p class="mb-4">Learn about Newtonian physics from our bumper swing, or travel back in time to meet our resident Woolly Mammoth! Our exhibits are designed for curious minds.</p>
+                            <p class="font-semibold">Join the Young Stars Club!</p>
+                            <p>Meets every Saturday from 10:00 to 13:00 to experiment with our team of experts.</p>
+                        </div>
+                        <!-- For Teachers -->
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">For Teachers</h3>
+                            <p class="mb-4">We want to work with schools to create places of learning. We offer guided tours, a learning laboratory, and inspiring video presentations for your students.</p>
+                            <a href="#" class="text-indigo-600 hover:underline font-semibold">Contact us to arrange a visit &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exhibitions Page -->
+        <section id="exhibitions" class="page">
+            <div class="bg-indigo-600 text-white text-center py-16 px-6">
+                <h1 class="text-4xl font-bold">Our Exhibition Spaces</h1>
+                <p class="mt-2 text-lg">Dive into the fascinating worlds of science and technology.</p>
+            </div>
+            <div class="container mx-auto px-6 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cosmology -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/405219/pexels-photo-405219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Phases of a lunar eclipse against a black sky" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Cosmology</h3>
+                            <p class="text-gray-700">Explore the wonders of our cosmos in ‘The Sky Above Us’. Learn about constellations, galaxies, and the history of solar exploration from Galileo to today.</p>
+                        </div>
+                    </div>
+                    <!-- Evolution -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/956405/pexels-photo-956405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A museum exhibit with large models of ants" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Evolution</h3>
+                            <p class="text-gray-700">Discover the origins of life on this planet and meet creatures who didn't survive, including our Woolly Mammoth, Dodos, and dinosaurs.</p>
+                        </div>
+                    </div>
+                    <!-- Biology and Medicine -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/2607178/pexels-photo-2607178.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A colorful anatomical model of a human heart" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Biology and Medicine</h3>
+                            <p class="text-gray-700">From micro-organisms to the human body, explore the history of medicine, penicillin, and the first heart transplant.</p>
+                        </div>
+                    </div>
+                    <!-- Robotics and AI -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/334686/pexels-photo-334686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A person wearing a VR headset and painting" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Robotics and AI</h3>
+                            <p class="text-gray-700">The information revolution is here. Explore the science of the future, from home AI to industrial robotics. You can even shake hands with Rob the Robot!</p>
+                        </div>
+                    </div>
+                    <!-- Ecology -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                         <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A green forest with sunlight filtering through the trees" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Ecology</h3>
+                            <p class="text-gray-700">Learn about the impact humans have on the planet, the dangers of global warming, and the positive ways we can all contribute to a brighter, sustainable future.</p>
+                        </div>
+                    </div>
+                     <!-- Physics -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                         <img src="https://images.pexels.com/photos/1010907/pexels-photo-1010907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A Newton's cradle with five orange balls" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Interactive Physics</h3>
+                            <p class="text-gray-700">Our exhibits are designed to be hands-on. See the principles of physics come to life as you interact with displays that demonstrate energy, motion, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Us Page -->
+        <section id="visit" class="page">
+             <div class="bg-teal-600 text-white text-center py-16 px-6">
+                <h1 class="text-4xl font-bold">Plan Your Visit</h1>
+                <p class="mt-2 text-lg">We can't wait to see you! Here's everything you need to know.</p>
+            </div>
+             <div class="container mx-auto px-6 py-16">
+                 <div class="grid lg:grid-cols-3 gap-12">
+                     <!-- Left Column: Hours & Admission -->
+                     <div class="lg:col-span-2">
+                         <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                             <h3 class="text-2xl font-bold text-teal-700 mb-4">Opening Hours</h3>
+                             <ul class="space-y-2 text-gray-700">
+                                 <li><span class="font-semibold w-24 inline-block">Monday:</span> Closed</li>
+                                 <li><span class="font-semibold w-24 inline-block">Tuesday:</span> 10:00 – 16:00</li>
+                                 <li><span class="font-semibold w-24 inline-block">Wednesday:</span> 10:00 – 16:00</li>
+                                 <li><span class="font-semibold w-24 inline-block">Thursday:</span> 10:00 – 16:00</li>
+                                 <li><span class="font-semibold w-24 inline-block">Friday:</span> 10:00 – 19:00</li>
+                                 <li><span class="font-semibold w-24 inline-block">Saturday:</span> 9:00 – 16:00</li>
+                                 <li><span class="font-semibold w-24 inline-block">Sunday:</span> 9:00 – 13:00</li>
+                             </ul>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold text-teal-700 mb-4">Admission</h3>
+                            <p class="text-2xl font-bold text-green-600 mb-2">Free for all!</p>
+                            <p class="text-gray-700">Guided tours are available every hour for 70 NOK per person, including a printed guide. Please contact us to arrange tours for groups of 6 or more.</p>
+                         </div>
+                     </div>
+                     <!-- Right Column: Location & Accessibility -->
+                     <div>
+                         <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                            <h3 class="text-2xl font-bold text-teal-700 mb-4">Location</h3>
+                            <p class="text-gray-700">Vågsgata 22,<br>4306 Sandnes,<br>Norway</p>
+                            <!-- Placeholder for map -->
+                            <div class="mt-4 bg-gray-200 h-48 rounded-lg flex items-center justify-center text-gray-500">
+                                Interactive Map Coming Soon
+                            </div>
+                         </div>
+                         <div class="bg-white p-8 rounded-lg shadow-lg">
+                             <h3 class="text-2xl font-bold text-teal-700 mb-4">Facilities</h3>
+                             <ul class="space-y-2 text-gray-700">
+                                 <li>♿ Wheelchair accessible ramps</li>
+                                 <li>🎧 Audio guides available</li>
+                                 <li>⠇ Braille display signs</li>
+                                 <li>☕ Café for lunches and snacks</li>
+                                 <li>🛍️ Gift and memorabilia shop</li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Get Involved Page -->
+        <section id="involved" class="page">
+             <div class="bg-orange-500 text-white text-center py-16 px-6">
+                <h1 class="text-4xl font-bold">Get Involved</h1>
+                <p class="mt-2 text-lg">Become a part of our community and help us share the wonders of science.</p>
+            </div>
+             <div class="container mx-auto px-6 py-16">
+                 <div class="max-w-4xl mx-auto">
+                    <!-- Support -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-orange-600 mb-3">Support Us</h3>
+                        <p class="text-gray-700 mb-4">Donations are very welcome and are an important way we keep this museum open and accessible to the whole community. You can also support us by donating items of interest to our collections.</p>
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Donate Now</a>
+                    </div>
+                    <!-- Volunteer -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-orange-600 mb-3">Volunteer</h3>
+                        <p class="text-gray-700 mb-4">Help keep our displays in good order and enjoy perks like behind-the-scenes access and staff-only lectures. Contact us to find out how you can get involved.</p>
+                         <a href="#" class="text-orange-600 hover:underline font-semibold">Learn More &rarr;</a>
+                    </div>
+                    <!-- Internships -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-orange-600 mb-3">Internships</h3>
+                        <p class="text-gray-700 mb-4">Interested in working in a museum? An internship with us means learning from academics and people passionate about sharing science with the community.</p>
+                        <a href="#" class="text-orange-600 hover:underline font-semibold">See Opportunities &rarr;</a>
+                    </div>
+                 </div>
+            </div>
+        </section>
+        
+        <!-- Special Events Page -->
+        <section id="events" class="page">
+             <div class="bg-purple-600 text-white text-center py-16 px-6">
+                <h1 class="text-4xl font-bold">Special Events & Exhibitions</h1>
+                <p class="mt-2 text-lg">There's always something new and exciting happening at the museum!</p>
+            </div>
+            <div class="container mx-auto px-6 py-16">
+                 <div class="space-y-12">
+                    <!-- Event 1 -->
+                    <div class="grid md:grid-cols-3 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                        <div class="md:col-span-1">
+                            <img src="https://images.pexels.com/photos/348421/pexels-photo-348421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="An astronaut suit on display in a museum" class="rounded-lg w-full h-auto">
+                        </div>
+                        <div class="md:col-span-2">
+                             <h3 class="text-2xl font-bold text-purple-700 mb-2">Visiting Professor of Aeronautics</h3>
+                             <p class="text-gray-600 mb-4">It is our pleasure to announce that Prof Sheila Widnall from MIT will be delivering 3 lectures on the development of aeronautics and the future of this exciting ‘space’.</p>
+                             <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Lecture Series</span>
+                        </div>
+                    </div>
+                     <!-- Event 2 -->
+                    <div class="grid md:grid-cols-3 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                         <div class="md:col-span-1">
+                            <img src="https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A family looking at a dinosaur skeleton in a museum" class="rounded-lg w-full h-auto">
+                        </div>
+                        <div class="md:col-span-2">
+                             <h3 class="text-2xl font-bold text-purple-700 mb-2">Night in the Museum</h3>
+                             <p class="text-gray-600 mb-4">Get your family together for an exciting night as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to explore!</p>
+                              <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Family Event</span>
+                        </div>
+                    </div>
+                     <!-- Event 3 -->
+                    <div class="grid md:grid-cols-3 gap-8 items-center bg-white p-8 rounded-lg shadow-lg">
+                         <div class="md:col-span-1">
+                            <img src="https://images.pexels.com/photos/714701/pexels-photo-714701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A wind turbine against a cloudy sky" class="rounded-lg w-full h-auto">
+                        </div>
+                        <div class="md:col-span-2">
+                             <h3 class="text-2xl font-bold text-purple-700 mb-2">Energetica Exhibition on Loan</h3>
+                             <p class="text-gray-600 mb-4">On loan from the NEMO Science Museum in Amsterdam, this series of installations allows visitors to experience the power of the elements, from solar energy to wind turbines.</p>
+                              <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Special Exhibition</span>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Community Science Museum</h3>
+                    <p class="text-gray-400">"Explore together"</p>
+                    <p class="text-gray-400 mt-2">Vågsgata 22, 4306 Sandnes</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="nav-link text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#exhibitions" class="nav-link text-gray-400 hover:text-white">Exhibitions</a></li>
+                        <li><a href="#visit" class="nav-link text-gray-400 hover:text-white">Visit Us</a></li>
+                        <li><a href="#involved" class="nav-link text-gray-400 hover:text-white">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <!-- Social media icons would go here -->
+                        <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Community Science Museum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
+            const pages = document.querySelectorAll('.page');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function showPage(pageId) {
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                const activePage = document.getElementById(pageId);
+                if (activePage) {
+                    activePage.classList.add('active');
+                }
+                window.scrollTo(0, 0); // Scroll to top on page change
+            }
+
+            function handleNavClick(event) {
+                event.preventDefault();
+                const pageId = event.currentTarget.getAttribute('href').substring(1);
+                showPage(pageId);
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            }
+
+            navLinks.forEach(link => link.addEventListener('click', handleNavClick));
+            navLinksMobile.forEach(link => link.addEventListener('click', handleNavClick));
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Show initial page based on hash or default to home
+            const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            showPage(initialPage);
+        });
+    </script>
+</body>
+</html>
